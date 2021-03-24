@@ -27,20 +27,19 @@ def ej1():
     # Además, complete la línea de código necesaria para que
     # el valor de "x" incremente "1" en cada iteración
 
-    while condicion:    # reemplace "condicion" por lo que crea necesario
+    while x < 5:    # reemplace "condicion" por lo que crea necesario
         print("Valor de x =", x)
         # Coloque la línea de código para que "X" incremente "1"
-
-    x = 5
+        x += 1
     # Dado el siguiente "while", complete la condicion
     # para que el "while" itere siempre que <x sea mayor o igual a 0>
     # Además, complete la línea de código necesaria para que
     # el valor de "x" decremente "1" en cada iteración
 
-    while condicion:    # reemplace "condicion" por lo que crea necesario
+    while x >= 0:    # reemplace "condicion" por lo que crea necesario
         print("Valor de x =", x)
         # Coloque la línea de código para que "X" decremente "1"
-
+        x -= 1
 
 def ej2():
     # Ejemplos con bucles "for"
@@ -53,10 +52,16 @@ def ej2():
     # y utilizar como elemento del "for" cada color
     # for color ...
 
+    for color in colores:
+        print('color:', color)
+
     # Itere el "for" utilizando el tamaño de la lista
     # como parámetro y utilizar el índice para acceder a
     # los elementos de la lista
     # for i ...
+
+    for i in range(len(colores)):
+        print('Indice:', i ,'color:', colores[i])
 
 
 def ej3():
@@ -67,7 +72,11 @@ def ej3():
     # La sumatoria se deberá ir guardando en la variable "suma"
     numeros = [1, 5, -1, 6, 10, 2, -5]
     suma = 0   # Variable ya inicializada, la suma arranca en cero
-
+    for i in numeros:
+        suma = suma + (i)
+        pass # utilize pass pero podria haber utilizado continue o nada
+        print(suma) # el print lo deje dependiendo del bucle for para mostrar la sumatoria
+    #print(suma) lo podria haber mostrado asi para terminar el bucle con solo el resultado    
 
 def ej4():
     # Ejercicios con bucles "while"
@@ -79,12 +88,21 @@ def ej4():
     # una condición compuesta (utilice el operador "and" o "or" según corresponda)
     # En cada iteracion del bucle debe incrementar el valor de "x" en "2"
     # e imprimir en pantalla el resultado de X (antes de incrementar) con print
-
+    while x < 10 and x != 6:
+        print(x)
+        pass
+        x += 2
     # Realice el mismo bucle "while" pero en vez de estar formado por una condición
     # compuesta, que el "while" siga iterando mientras <x sea menos a 10>, y dentro del
     # "while" consultar si <x es igual a 6>, y en ese caso realizar una interrupción del bucle
     # En cada iteracion del bucle debe incrementar el valor de "x" en "2"
     # e imprimir en pantalla el resultado de X (antes de incrementar) con print
+    x = 0
+    while x < 10:
+        if x == 6:
+            break
+        print(x)
+        x += 2
 
 
 def ej5():
@@ -127,8 +145,8 @@ def ej6():
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
     ej1()
-    #ej2()
-    #ej3()
-    #ej4()
+    ej2()
+    ej3()
+    ej4()
     #ej5()
     #ej6()
