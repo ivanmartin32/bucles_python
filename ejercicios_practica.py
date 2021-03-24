@@ -115,11 +115,15 @@ def ej5():
     # sino que va hasta el anterior
 
     inicio = int(input('Ingrese el primero número de la secuencia\n'))
-    # fin....
+    fin = int(input('Ingrese el ultimo número de la secuencia\n'))
 
-    # for ... in range(....)
-
+    suma = 0
+    for i in range(inicio,fin+1):
+        suma = suma + i
+        continue
     # Imprimir el valor de la sumatoria
+
+    print('La sumatoria total del la secuencia es', suma)
 
 
 def ej6():
@@ -132,21 +136,27 @@ def ej6():
     # sino que va hasta el anterior
 
     inicio = int(input('Ingrese el primero número de la secuencia\n'))
-    # fin....
-
+    fin = int(input('Ingrese el primero número de la secuencia\n'))
+    
     cantidad_numeros_positivos = 0  # Inicializo el contador en 0
-    #cantidad_numeros_negativos
+    cantidad_numeros_negativos = 0
 
-    # for ... in range(....)
-
+    for i in range(inicio,fin+1):
+        if i < 0:
+            cantidad_numeros_negativos += 1
+        elif i >= 0:
+            cantidad_numeros_positivos += 1
+    
     # Imprimir el valor de la cantidad de números positivos y negativos
 
-
+    print('La catidad de numero positivos de la secuencia', cantidad_numeros_positivos)
+    print('La cantidad de numeros negativos de la secuencia', cantidad_numeros_negativos)
+    
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
     ej1()
     ej2()
     ej3()
     ej4()
-    #ej5()
-    #ej6()
+    ej5()
+    ej6()
