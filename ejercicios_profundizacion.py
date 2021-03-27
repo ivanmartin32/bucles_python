@@ -35,18 +35,25 @@ def ej1():
     sino que va hasta el anterior
     '''
 
-    # inicio = ....
-    # fin = ....
+    inicio = int (input("Ingrese primer numero de la secuencia \n"))
+    fin = int (input("Ingrese ultimo numero de la secuencia \n"))
 
-    # cantidad_numeros ....
-    # sumatoria ....
+    cantidad_numeros = 0
+    sumatoria = 0
 
-    # bucle.....
-
+    for i in range(inicio,fin+1):
+        cantidad_numeros += 1
+    print('La cantidad de numeros ingresados son:', cantidad_numeros)
+        
+    for i in range(inicio,fin+1):
+        sumatoria = sumatoria + i
+    print('La sumatoria de la secuencia es:', sumatoria)
+        
     # Al terminar el bucle calcular el promedio como:
-    # promedio = sumatoria / cantidad_numeros
+    promedio = sumatoria / cantidad_numeros
 
     # Imprimir resultado en pantalla
+    print('El promedio de la secuencia es :', promedio)
 
 
 def ej2():
@@ -62,7 +69,45 @@ def ej2():
     Se debe debe imprimir un cartel de error si el operador ingresado no es
     alguno de lo soportados o no es la palabra "FIN"
     '''
-
+    # Lo reforme todo al trabajo anterior
+    
+    operador = str(input('Ingrese un operador \n'))    
+    while operador != 'fin':
+        if operador == '+':
+           numero1 = int(input('Ingrese primer numero \n'))
+           numero2 = int(input('Ingrese segundo numero \n'))
+           resultado = numero1 + numero2
+           print('El resultado es:', resultado)
+           operador = str(input('Si desea salir ingrese fin sino ingrese un operador \n'))
+        elif operador == '-':
+           numero1 = int(input('Ingrese primer numero \n'))
+           numero2 = int(input('Ingrese segundo numero \n'))
+           resultado = numero1 - numero2
+           print('El resultado es:', resultado)
+           operador = str(input('Si desea salir ingrese fin sino ingrese un operador \n'))
+        elif operador == '*':
+           numero1 = int(input('Ingrese primer numero \n'))
+           numero2 = int(input('Ingrese segundo numero \n'))
+           resultado = numero1 * numero2
+           print('El resultado es:', resultado)
+           operador = str(input('Si desea salir ingrese fin sino ingrese un operador \n'))
+        elif operador == '/':
+           numero1 = int(input('Ingrese primer numero \n'))
+           numero2 = int(input('Ingrese segundo numero \n'))
+           resultado = numero1 / numero2
+           print('El resultado es:', resultado)
+           operador = str(input('Si desea salir ingrese fin sino ingrese un operador \n'))
+        elif operador == '**':
+           numero1 = int(input('Ingrese primer numero \n'))
+           numero2 = int(input('Ingrese segundo numero \n'))
+           resultado = numero1 ** numero2
+           print('El resultado es:', resultado)
+           operador = str(input('Si desea salir ingrese fin sino ingrese un operador \n'))
+        else:
+           print('Error')
+           operador = str(input('Los operadores son: +,-,*,/,** \n'))
+        continue
+   
 
 def ej3():
     print("Mi organizador académico (#_#)")
@@ -249,8 +294,8 @@ def ej5():
 
 if __name__ == '__main__':
     print("Ejercicios de práctica")
-    #ej1()
-    #ej2()
+    ej1()
+    ej2()
     #ej3()
     #ej4()
     #ej5()
