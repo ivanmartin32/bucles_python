@@ -149,8 +149,8 @@ def ej6():
     
     # Imprimir el valor de la cantidad de números positivos y negativos
 
-    print('La catidad de numero positivos de la secuencia', cantidad_numeros_positivos)
-    print('La cantidad de numeros negativos de la secuencia', cantidad_numeros_negativos)
+    print('La catidad de numero positivos de la secuencia son:', cantidad_numeros_positivos)
+    print('La cantidad de numeros negativos de la secuencia son ', cantidad_numeros_negativos)
     
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
