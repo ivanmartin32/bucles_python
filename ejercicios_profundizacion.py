@@ -117,7 +117,7 @@ def ej3():
     <condicionales_python / ejercicios_practica / ej3>,
     copielo a este ejercicio y modifíquelo para cumplir
     el siguiente requerimiento
-
+    
     Las notas del estudinte se encuentran almacenadas en una
     lista llamada "notas" que ya hemos definido al comienzo del archivo
 
@@ -131,7 +131,7 @@ def ej3():
     Debe contar la cantidad de notas válidas y la cantidad de ausentes
     '''
 
-    # Para calcular el promedio primero debe obtener la suma
+   # Para calcular el promedio primero debe obtener la suma
     # de todas las notas, que irá almacenando en esta variable
     sumatoria = 0           # Ya le hemos inicializado en 0
 
@@ -140,14 +140,32 @@ def ej3():
 
     # Realice aquí el bucle para recorrer todas las notas
     # y cacular la sumatoria
-
+    for i in notas:
+        sumatoria = sumatoria + i
+    for i in notas:
+        if i > 0:
+            cantidad_notas += 1
+        elif i < 0:
+            cantidad_ausentes += 1
     # Terminado el bucle calcule el promedio como
-    # promedio = sumatoria / cantidad_notas
-
+    promedio = sumatoria / cantidad_notas # el promedio lo dividi solo por las notas validas
+    
     # Utilice la nota promedio calculada y transformela
     # a calificación con letras, imprima en pantalla el resultado
 
+    if promedio >= 90:
+        print('A')
+    elif promedio >= 80:
+        print('B')
+    elif promedio >= 70:
+        print('C')
+    elif promedio >= 60:
+        print('D')
+    elif promedio < 60:
+        print('F')
+
     # Imprima en pantalla al cantidad de ausentes
+    print(cantidad_ausentes)
 
 
 def ej4():
@@ -296,6 +314,6 @@ if __name__ == '__main__':
     print("Ejercicios de práctica")
     ej1()
     ej2()
-    #ej3()
+    ej3()
     #ej4()
     #ej5()
