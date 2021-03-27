@@ -334,6 +334,28 @@ def ej5():
        recorre la lista de palabras y busca la mayor según el motivo ingresado ("1" o "2")
 
   '''
+    palabras = [str(input('Ingrese primera palabra \n')),
+        str(input('Ingrese segunda palabra \n')),str(input('Ingrese tercera palabra
+    orden = int(input('Presione 1 para ordenar alfabeticamente de (A-Z) \n'
+                  'Presione 2 para ordenar alfabeticamente de (Z-A) \n'
+                  'Presione 3 para ordenar por cantidad de letras (-/+) \n'
+                  'Presione 4 para ordenar por cantidad de letras (+/-) \n'
+# En este caso se me ocurrio usarlo con el metodo sort y no con operador >
+# para hacerlo mas simple y agregar mas opciones
+    
+    if orden == 1:
+    palabras.sort()
+    print(palabras)
+    elif orden == 2:
+    palabras.sort(reverse=True)
+    print(palabras)
+    elif orden == 3:
+    palabras.sort(key=len)
+    print(palabras)
+    elif orden == 4:
+    palabras.sort(key=len, reverse=True)
+    print(palabras)
+    
 
 
 if __name__ == '__main__':
@@ -342,4 +364,4 @@ if __name__ == '__main__':
     ej2()
     ej3()
     ej4()
-    #ej5()
+    ej5()
