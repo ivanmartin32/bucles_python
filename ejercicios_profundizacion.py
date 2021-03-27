@@ -165,7 +165,7 @@ def ej3():
         print('F')
 
     # Imprima en pantalla al cantidad de ausentes
-    print(cantidad_ausentes)
+    print('La cantidad de ausencia son:', cantidad_ausentes)
 
 
 def ej4():
@@ -207,8 +207,16 @@ def ej4():
     temperatura_len = 0         # Aquí debe almacenar cuantas temperatuas hay en la lista
 
     # Colocar el bucle aqui......
-
-    # Al finalizar el bucle compare si el valor que usted calculó para
+    for i in temp_dataloger:
+        temperatura_sumatoria = sum(temp_dataloger)
+        temperatura_len += 1
+        temperatura_promedio = temperatura_sumatoria / temperatura_len
+        temperatura_max = max(temp_dataloger)
+        temperatura_min = min(temp_dataloger)
+    print('La maxima es:', temperatura_max)        
+    print('La minima es:', temperatura_min)    
+    print('La temperatura promedio es:', temperatura_promedio)    
+       
     # temperatura_max y temperatura_min coincide con el que podría calcular
     # usando la función "max" y la función "min" de python
     # función "max" --> https://www.w3schools.com/python/ref_func_max.asp
@@ -241,6 +249,24 @@ def ej4():
     # Imprima el resultado en pantalla
     # Debe utilizar temperatura_max y temperatura_min para definirlo
 
+    verano_min = 19
+    verano_max = 28
+    otoño_min = 11
+    otoño_max = 20
+    invierno_min = 8
+    invierno_max = 14
+    primavera_min = 10
+    primavera_max = 24
+
+    if temperatura_min >= verano_min and temperatura_max <= verano_max:
+        print('Nos encontramos en Verano')
+    elif temperatura_min >= otoño_min and temperatura_max <= otoño_max:
+        print('Nos encontramos en Otoño')
+    elif temperatura_min >= invierno_min and temperatura_max <= invierno_max:
+        print('Nos encontramos en Invierno')
+    elif temperatura_min >= primavera_min and temperatura_max <= primavera_max:
+        print('Nos encontramos en Primavera')
+    
 
 def ej5():
     print("Ahora sí! buena suerte :)")
@@ -315,5 +341,5 @@ if __name__ == '__main__':
     ej1()
     ej2()
     ej3()
-    #ej4()
+    ej4()
     #ej5()
