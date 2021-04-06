@@ -48,7 +48,15 @@ def ej1():
     for i in range(inicio,fin+1):
         sumatoria = sumatoria + i
     print('La sumatoria de la secuencia es:', sumatoria)
-        
+    
+    # Inovetip: acá podrías haber hecho todo en un bucle, tipo así:
+    # for i in range(inicio,fin+1):
+    #     cantidad_numeros += 1
+    #     sumatoria = sumatoria + i
+    #
+    # print('La cantidad de numeros ingresados son:', cantidad_numeros)
+    # print('La sumatoria de la secuencia es:', sumatoria)
+
     # Al terminar el bucle calcular el promedio como:
     promedio = sumatoria / cantidad_numeros
 
@@ -107,7 +115,18 @@ def ej2():
            print('Error')
            operador = str(input('Los operadores son: +,-,*,/,** \n'))
         continue
-   
+        
+        # Inovetip: Acá dentro del bucle podrías haber hecho el input solo una vez para cada variable y luego encuestar el 
+        # operador para realizar la operación. Esto te bajaría mucho las líneas de código implementadas:
+        # while operador != 'fin': 
+        #     numero1 = int(input('Ingrese primer numero \n'))
+        #     numero2 = int(input('Ingrese segundo numero \n'))
+        #     if operador == '+':
+        #         print('El resultado es:', numero1 + numero2)
+        #     elif operador == '-':
+        #         print('El resultado es:', numero1 - numero2)
+        # Y así... ojo que tampoco hace falta poner el continue! ni el break ni el pass para el funcionamiento del bucle!
+        
 
 def ej3():
     print("Mi organizador académico (#_#)")
@@ -149,6 +168,8 @@ def ej3():
             cantidad_ausentes += 1
     # Terminado el bucle calcule el promedio como
     promedio = sumatoria / cantidad_notas # el promedio lo dividi solo por las notas validas
+    
+    # Inovetip: Acá también podrías haber utilizado un solo bucle :D
     
     # Utilice la nota promedio calculada y transformela
     # a calificación con letras, imprima en pantalla el resultado
