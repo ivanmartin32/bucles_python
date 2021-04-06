@@ -334,30 +334,54 @@ def ej5():
        recorre la lista de palabras y busca la mayor según el motivo ingresado ("1" o "2")
 
   '''
-   # palabras = [str(input('Ingrese primera palabra \n')),
-   #     str(input('Ingrese segunda palabra \n')),str(input('Ingrese tercera palabra
-   # orden = int(input('Presione 1 para ordenar alfabeticamente de (A-Z) \n'
-   #               'Presione 2 para ordenar alfabeticamente de (Z-A) \n'
-   #               'Presione 3 para ordenar por cantidad de letras (-/+) \n'
-   #               'Presione 4 para ordenar por cantidad de letras (+/-) \n'
-# E#n este caso se me ocurrio usarlo con el metodo sort y no con operador >
-# p#ara hacerlo mas simple y agregar mas opciones
-   # 
-   # if orden == 1:
-   # palabras.sort()
-   # print(palabras)
-   # elif orden == 2:
-   # palabras.sort(reverse=True)
-   # print(palabras)
-   # elif orden == 3:
-   # palabras.sort(key=len)
-   # print(palabras)
-   # elif orden == 4:
-   # palabras.sort(key=len, reverse=True)
-   # print(palabras)
+       
+    # E#n este caso se me ocurrio usarlo con el metodo sort y no con operador >
+    # p#ara hacerlo mas simple y agregar mas opciones
     
+    orden = str(input('Ingrese 1 para obtener la palabra más grande por orden alfabético \n'
+                    'Ingrese 2 para obtener la palabra más grande por cantidad de letras \n'
+                    'Ingrese 3 para salir del programa \n'))
+    while orden == '1':
+        print('Ingrese 4 palabras')
+        palabras = []
+        palabras.append(input('ingrese primera palabra \n'))
+        palabras.append(input('Ingrese segunda palabra \n'))
+        palabras.append(input('Ingrese tercer palabra \n'))
+        palabras.append(input('Ingrese cuarta palabra \n'))
+        palabras.sort(reverse=True)
+        print(palabras)
+        for i in palabras:
+            print('La palabra mas grande alfabeticamente es', palabras[0])
+            break
+        orden = str(input('Ingrese 1 para obtener la palabra más grande por orden alfabético \n'
+                'Ingrese 2 para obtener la palabra más grande por cantidad de letras \n'
+                'Ingrese 3 para salir del programa \n'))
+    while orden == '2':
+        print('Ingrese 4 palabras')
+        palabras = []
+        palabras.append(input('ingrese primera palabra \n'))
+        palabras.append(input('Ingrese segunda palabra \n'))
+        palabras.append(input('Ingrese tercer palabra \n'))
+        palabras.append(input('Ingrese cuarta palabra \n'))
+        palabras.sort(key=len , reverse=True)
+        print(palabras)
+        for i in palabras:
+            print('La palabra mas grande alfabeticamente es', palabras[0])
+            break
+        orden = str(input('Ingrese 1 para obtener la palabra más grande por orden alfabético \n'
+                'Ingrese 2 para obtener la palabra más grande por cantidad de letras \n'
+                'Ingrese 3 para salir del programa \n'))
+    while orden == '3':
+        print('El programa a finalizado')
+        break
 
-
+    while orden != '1' and orden != '2' and orden != '3':
+        print ('Error el numero ingresado no es el correcto')
+        orden = str(input('Ingrese 1 para obtener la palabra más grande por orden alfabético \n'
+                'Ingrese 2 para obtener la palabra más grande por cantidad de letras \n'
+                'Ingrese 3 para salir del programa \n'))
+    
+    
 if __name__ == '__main__':
     print("Ejercicios de práctica")
     ej1()
